@@ -330,7 +330,5 @@
 // empty-define parameter to bindtextdomain() call
 #define GETTEXT_PACKAGE ""
 
-// camlibs and IOLIBS is the folder where libgphoto2 searches for .dlls to load
+// CAMLIBS is the folder where libgphoto2 searches for camera .dlls to load
 #define CAMLIBS "camlibs"
-
-#define IOLIBS "iolibs"

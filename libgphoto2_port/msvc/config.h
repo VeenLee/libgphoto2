@@ -302,3 +302,6 @@
 
 // define this to omit "dllexport" defines for libpcre
 #define PCRE_DEFINITION
+
+// IOLIBS is the folder where libgphoto2 searches for I/O .dlls to load
+#define IOLIBS "iolibs"
