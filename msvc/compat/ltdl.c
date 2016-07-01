@@ -93,7 +93,10 @@ int lt_dlforeachfile(
          strcmp(findData.cFileName, "..") == 0)
          continue;
 
-      int iRet = func(findData.cFileName, data);
+      char completeFilename[MAX_PATH];
+      _snprintf(completeFilename, MAX_PATH, "%s\\%s", fullSearchPath, findData.cFileName);
+
+      int iRet = func(completeFilename, data);
       if (iRet == -1)
          break;
 
