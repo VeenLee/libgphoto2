@@ -111,7 +111,11 @@ lt_dlhandle lt_dlopenext(const char* filename)
 {
    UINT prevErrorMode = SetErrorMode(SEM_FAILCRITICALERRORS);
 
+   SetDllDirectory(userDefinedSearchDir);
+
    lt_dlhandle handle = (lt_dlhandle)LoadLibrary(filename);
+
+   SetDllDirectory(NULL);
 
    SetErrorMode(prevErrorMode);
 
